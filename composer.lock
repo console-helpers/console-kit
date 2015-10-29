@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b08009eab76fc33bf4446109f8096eb0",
-    "content-hash": "2d8dbcb166f0d328f3388bdcd5c7e262",
+    "hash": "a1b31aad4a136385eb8136759dcaa253",
+    "content-hash": "c6272bd4bb49d262ebe2088ece457137",
     "packages": [
         {
             "name": "pimple/pimple",
@@ -55,16 +55,16 @@
         },
         {
             "name": "stecman/symfony-console-completion",
-            "version": "0.6.0",
+            "version": "0.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stecman/symfony-console-completion.git",
-                "reference": "0e426113086878a21aea9db0b2996d2f702b6d33"
+                "reference": "983d6f07b4edf307969f4edf5ab290fd1fb2f5a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stecman/symfony-console-completion/zipball/0e426113086878a21aea9db0b2996d2f702b6d33",
-                "reference": "0e426113086878a21aea9db0b2996d2f702b6d33",
+                "url": "https://api.github.com/repos/stecman/symfony-console-completion/zipball/983d6f07b4edf307969f4edf5ab290fd1fb2f5a2",
+                "reference": "983d6f07b4edf307969f4edf5ab290fd1fb2f5a2",
                 "shasum": ""
             },
             "require": {
@@ -96,7 +96,7 @@
                 }
             ],
             "description": "Automatic BASH completion for Symfony Console Component based applications.",
-            "time": "2015-08-30 15:37:24"
+            "time": "2015-09-30 10:14:44"
         },
         {
             "name": "symfony/console",
