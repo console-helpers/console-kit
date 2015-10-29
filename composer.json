@@ -22,5 +22,10 @@
 			"ConsoleHelpers\\ConsoleKit\\": "src/ConsoleKit/",
 			"Tests\\ConsoleHelpers\\ConsoleKit\\": "tests/ConsoleKit/"
 		}
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "0.0.x-dev"
+		}
 	}
 }
