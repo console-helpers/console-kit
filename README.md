@@ -13,7 +13,7 @@ Console-Kit is a toolkit for creating command line applications using Symfony Co
 
 ## Installation
 
-1. use the `composer create-project console-helpers/new-project` to create new project using this library
+1. use the `composer create-project console-helpers/new-project project-name dev-master` to create new project using this library
 
 ## Contributing
 
