@@ -90,6 +90,21 @@ class ConfigEditorTest extends WorkingDirectoryAwareTestCase
 		$this->assertEquals('value_b', $config_editor->get('setting_b'));
 	}
 
+	public function testConfigStoredDefaultsAreUpgraded()
+	{
+		$stored_values = array('setting_a' => 'saved_a', 'setting_b' => 'saved_b');
+		file_put_contents($this->configPath, json_encode($stored_values));
+
+		$config_editor = new ConfigEditor(
+			$this->configPath,
+			array('setting_a' => 'default_a', 'setting_b' => 'default_b', 'setting_c' => 'default_c')
+		);
+
+		$this->assertEquals('saved_a', $config_editor->get('setting_a'));
+		$this->assertEquals('saved_b', $config_editor->get('setting_b'));
+		$this->assertEquals('default_c', $config_editor->get('setting_c'));
+	}
+
 	public function testConfigFileCreation()
 	{
 		$this->assertFileNotExists($this->configPath, 'config file doesn\'t exist initially');

@@ -95,7 +95,15 @@ class ConfigEditor
 	protected function load(array $defaults)
 	{
 		if ( file_exists($this->filename) ) {
-			$this->settings = json_decode(file_get_contents($this->filename), true);
+			$stored_settings = json_decode(file_get_contents($this->filename), true);
+			$new_defaults = array_diff_key($defaults, $stored_settings);
+
+			if ( $new_defaults ) {
+				$stored_settings = array_merge($stored_settings, $new_defaults);
+				$this->store();
+			}
+
+			$this->settings = $stored_settings;
 
 			return;
 		}
