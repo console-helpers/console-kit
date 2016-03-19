@@ -100,9 +100,16 @@ class ConfigEditorTest extends WorkingDirectoryAwareTestCase
 			array('setting_a' => 'default_a', 'setting_b' => 'default_b', 'setting_c' => 'default_c')
 		);
 
-		$this->assertEquals('saved_a', $config_editor->get('setting_a'));
-		$this->assertEquals('saved_b', $config_editor->get('setting_b'));
-		$this->assertEquals('default_c', $config_editor->get('setting_c'));
+		// Confirm, that upgraded settings are immediately available.
+		$this->assertEquals('saved_a', $config_editor->get('setting_a'), 'The "setting_a" was preserved.');
+		$this->assertEquals('saved_b', $config_editor->get('setting_b'), 'The "setting_b" was preserved.');
+		$this->assertEquals('default_c', $config_editor->get('setting_c'), 'The "setting_c" was added with default.');
+
+		// Confirm, that upgrades settings were saved to disk.
+		$config_editor = new ConfigEditor($this->configPath);
+		$this->assertEquals('saved_a', $config_editor->get('setting_a'), 'The "setting_a" was preserved after save.');
+		$this->assertEquals('saved_b', $config_editor->get('setting_b'), 'The "setting_b" was preserved after save.');
+		$this->assertEquals('default_c', $config_editor->get('setting_c'), 'The "setting_c" was added with default after save.');
 	}
 
 	public function testConfigFileCreation()
