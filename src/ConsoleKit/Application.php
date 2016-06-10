@@ -73,4 +73,14 @@ class Application extends BaseApplication
 		return parent::run($input, $output);
 	}
 
+	/**
+	 * Detects, when we're inside PHAR file.
+	 *
+	 * @return boolean
+	 */
+	protected function isPharFile()
+	{
+		return strpos(__DIR__, 'phar://') === 0;
+	}
+
 }
