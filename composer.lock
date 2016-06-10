@@ -100,16 +100,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v2.8.3",
+            "version": "v2.8.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "56cc5caf051189720b8de974e4746090aaa10d44"
+                "reference": "5ac8bc9aa77bb2edf06af3a1bb6bc1020d23acd3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/56cc5caf051189720b8de974e4746090aaa10d44",
-                "reference": "56cc5caf051189720b8de974e4746090aaa10d44",
+                "url": "https://api.github.com/repos/symfony/console/zipball/5ac8bc9aa77bb2edf06af3a1bb6bc1020d23acd3",
+                "reference": "5ac8bc9aa77bb2edf06af3a1bb6bc1020d23acd3",
                 "shasum": ""
             },
             "require": {
@@ -156,20 +156,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2016-02-28 16:20:50"
+            "time": "2016-06-06 15:06:25"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.1.1",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "1289d16209491b584839022f29257ad859b8532d"
+                "reference": "dff51f72b0706335131b00a7f49606168c582594"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/1289d16209491b584839022f29257ad859b8532d",
-                "reference": "1289d16209491b584839022f29257ad859b8532d",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/dff51f72b0706335131b00a7f49606168c582594",
+                "reference": "dff51f72b0706335131b00a7f49606168c582594",
                 "shasum": ""
             },
             "require": {
@@ -181,7 +181,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-master": "1.2-dev"
                 }
             },
             "autoload": {
@@ -215,7 +215,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-01-20 09:13:37"
+            "time": "2016-05-18 14:26:46"
         }
     ],
     "packages-dev": [
@@ -225,12 +225,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/aik099/CodingStandard.git",
-                "reference": "eab50b83546dbbee649c06c6a42c8f2761b2b653"
+                "reference": "3455e4d487e2cdd6460d2414d946de5cfabcd69f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aik099/CodingStandard/zipball/eab50b83546dbbee649c06c6a42c8f2761b2b653",
-                "reference": "eab50b83546dbbee649c06c6a42c8f2761b2b653",
+                "url": "https://api.github.com/repos/aik099/CodingStandard/zipball/3455e4d487e2cdd6460d2414d946de5cfabcd69f",
+                "reference": "3455e4d487e2cdd6460d2414d946de5cfabcd69f",
                 "shasum": ""
             },
             "require-dev": {
@@ -257,7 +257,7 @@
                 "PHP_CodeSniffer",
                 "codesniffer"
             ],
-            "time": "2016-02-26 20:33:27"
+            "time": "2016-05-21 12:59:53"
         }
     ],
     "aliases": [],
