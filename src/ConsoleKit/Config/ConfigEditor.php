@@ -66,6 +66,16 @@ class ConfigEditor
 	}
 
 	/**
+	 * Returns all config settings.
+	 *
+	 * @return array
+	 */
+	public function getAll()
+	{
+		return $this->settings;
+	}
+
+	/**
 	 * Sets config value.
 	 *
 	 * @param string $name  Config setting name.

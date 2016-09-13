@@ -51,6 +51,19 @@ class ConfigEditorTest extends WorkingDirectoryAwareTestCase
 		$this->assertEquals('user default', $config_editor->get('non-existing-setting', 'user default'));
 	}
 
+	public function testGetAll()
+	{
+		$settings = array(
+			'setting1' => 'top-value1',
+			'group1.setting1' => 'sub-value1',
+			'group1.sub-group1.setting1' => 'sub-value2',
+		);
+
+		$config_editor = $this->createConfigEditor($settings);
+
+		$this->assertEquals($settings, $config_editor->getAll());
+	}
+
 	public function testSet()
 	{
 		$config_editor = $this->createConfigEditor(array());

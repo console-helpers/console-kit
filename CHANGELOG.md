@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Added
-...
+- Added `ConfigEditor::getAll` method for getting all config settings at once.
 
 ### Changed
 ...
