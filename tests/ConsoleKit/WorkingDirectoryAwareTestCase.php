@@ -12,8 +12,9 @@ namespace Tests\ConsoleHelpers\ConsoleKit;
 
 
 use ConsoleHelpers\ConsoleKit\WorkingDirectory;
+use PHPUnit\Framework\TestCase;
 
-abstract class WorkingDirectoryAwareTestCase extends \PHPUnit_Framework_TestCase
+abstract class WorkingDirectoryAwareTestCase extends TestCase
 {
 
 	protected function setUp()

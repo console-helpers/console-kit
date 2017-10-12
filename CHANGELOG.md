@@ -4,13 +4,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Added
-- Added `ConfigEditor::getAll` method for getting all config settings at once.
+...
 
 ### Changed
 ...
 
 ### Fixed
 ...
+
+## [0.1.1] - 2017-10-12
+### Added
+- Added `ConfigEditor::getAll` method for getting all config settings at once.
+
+### Changed
+- Updated test suite to be compatible with PHPUnit 6.x
 
 ## [0.1.0] - 2016-03-19
 ### Fixed
