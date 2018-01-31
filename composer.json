@@ -1,7 +1,7 @@
 {
 	"name": "console-helpers/console-kit",
 	"description": "Toolkit for creating command line applications using Symfony Console component",
-	"license": "BSD 3-Clause",
+	"license": "BSD-3-Clause",
 	"authors": [
 		{
 			"name": "Alexander Obuhovich",
