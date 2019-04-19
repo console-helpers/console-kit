@@ -1,25 +1,35 @@
 sudo: false
 language: php
 
-php:
-    - 5.4
-    - 5.5
-    - 5.6
-    - 7.0
-    - 7.1
+cache:
+    directories:
+        - $HOME/.composer/cache
 
-before_install:
-    - if [ "$TRAVIS_PHP_VERSION" != "hhvm" ]; then composer require satooshi/php-coveralls:^1.0 --no-update; fi;
+php:
+  - 5.4
+  - 5.6
+  - 7.0
+  - 7.1
+
+matrix:
+    include:
+        - php: 5.5
+          env: PHPUNIT_VERSION="^4.8.36"
+        - php: 7.2
+          env: PHPUNIT_VERSION="^7.0"
+        - php: 7.3
+          env: PHPUNIT_VERSION="^7.0"
 
 install:
-    - composer require phpunit/phpunit --no-update
-    - composer update --prefer-source
+    - composer update --no-interaction
+    - if [ "$PHPUNIT_VERSION" != "" ]; then composer require phpunit/phpunit:"$PHPUNIT_VERSION" --no-interaction; fi;
 
 before_script:
     - mkdir -p build/logs
 
 script:
-    - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+    - if [ "$PHPUNIT_VERSION" = "" ]; then phpunit --coverage-clover build/logs/clover.xml; fi
+    - if [ "$PHPUNIT_VERSION" != "" ]; then vendor/bin/phpunit --coverage-clover build/logs/clover.xml; fi
 
 after_script:
     - if [ "$TRAVIS_PHP_VERSION" != "hhvm" ]; then php vendor/bin/coveralls -v; fi;

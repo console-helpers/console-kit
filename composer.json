@@ -19,7 +19,11 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"ConsoleHelpers\\ConsoleKit\\": "src/ConsoleKit/",
+			"ConsoleHelpers\\ConsoleKit\\": "src/ConsoleKit/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
 			"Tests\\ConsoleHelpers\\ConsoleKit\\": "tests/ConsoleKit/"
 		}
 	},
