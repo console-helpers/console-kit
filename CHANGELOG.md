@@ -12,6 +12,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 ...
 
+## [0.1.2] - 2020-12-20
+### Fixed
+- Updated dependencies.
+
 ## [0.1.1] - 2017-10-12
 ### Added
 - Added `ConfigEditor::getAll` method for getting all config settings at once.
