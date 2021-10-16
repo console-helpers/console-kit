@@ -1,7 +1,7 @@
 # Console-Kit
 
-[![Build Status](https://travis-ci.org/console-helpers/console-kit.svg?branch=master)](https://travis-ci.org/console-helpers/console-kit)
-[![Coverage Status](https://coveralls.io/repos/console-helpers/console-kit/badge.svg?branch=master&service=github)](https://coveralls.io/github/console-helpers/console-kit?branch=master)
+[![CI](https://github.com/console-helpers/console-kit/actions/workflows/tests.yml/badge.svg)](https://github.com/console-helpers/console-kit/actions/workflows/tests.yml)
+[![codecov](https://codecov.io/gh/console-helpers/console-kit/branch/master/graph/badge.svg?token=EpuotoxX5a)](https://codecov.io/gh/console-helpers/console-kit)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/console-helpers/console-kit/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/console-helpers/console-kit/?branch=master)
 
 
