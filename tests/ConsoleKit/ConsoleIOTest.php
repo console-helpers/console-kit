@@ -50,10 +50,12 @@ class ConsoleIOTest extends TestCase
 	 */
 	protected $io;
 
-	protected function setUp()
+	/**
+	 * @before
+	 * @return void
+	 */
+	protected function setupTest()
 	{
-		parent::setUp();
-
 		$this->input = $this->prophesize('Symfony\\Component\\Console\\Input\\InputInterface');
 		$this->output = $this->prophesize('Symfony\\Component\\Console\\Output\\OutputInterface');
 		$this->helperSet = $this->prophesize('Symfony\\Component\\Console\\Helper\\HelperSet');
@@ -141,10 +143,10 @@ class ConsoleIOTest extends TestCase
 	{
 		return array(
 			'quiet' => array(OutputInterface::VERBOSITY_QUIET),
-		    'normal' => array(OutputInterface::VERBOSITY_NORMAL),
-		    'verbose' => array(OutputInterface::VERBOSITY_VERBOSE),
-		    'very verbose' => array(OutputInterface::VERBOSITY_VERY_VERBOSE),
-		    'debug' => array(OutputInterface::VERBOSITY_DEBUG),
+			'normal' => array(OutputInterface::VERBOSITY_NORMAL),
+			'verbose' => array(OutputInterface::VERBOSITY_VERBOSE),
+			'very verbose' => array(OutputInterface::VERBOSITY_VERY_VERBOSE),
+			'debug' => array(OutputInterface::VERBOSITY_DEBUG),
 		);
 	}
 

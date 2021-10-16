@@ -17,10 +17,12 @@ use PHPUnit\Framework\TestCase;
 abstract class WorkingDirectoryAwareTestCase extends TestCase
 {
 
-	protected function setUp()
+	/**
+	 * @before
+	 * @return void
+	 */
+	protected function setupTest()
 	{
-		parent::setUp();
-
 		if ( $this->requireWorkingDirectory() ) {
 			$this->_createTempHomeDirectory();
 		}
@@ -54,10 +56,12 @@ abstract class WorkingDirectoryAwareTestCase extends TestCase
 		return $working_directory->get();
 	}
 
-	protected function tearDown()
+	/**
+	 * @after
+	 * @return void
+	 */
+	protected function teardownTest()
 	{
-		parent::tearDown();
-
 		$this->_restoreHomeDirectory();
 	}
 

@@ -24,10 +24,12 @@ class ConfigEditorTest extends WorkingDirectoryAwareTestCase
 	 */
 	protected $configPath;
 
-	protected function setUp()
+	/**
+	 * @before
+	 * @return void
+	 */
+	protected function setupTest()
 	{
-		parent::setUp();
-
 		$this->configPath = $this->getWorkingDirectory() . '/test_config.json';
 	}
 
@@ -127,7 +129,10 @@ class ConfigEditorTest extends WorkingDirectoryAwareTestCase
 
 	public function testConfigFileCreation()
 	{
-		$this->assertFileNotExists($this->configPath, 'config file doesn\'t exist initially');
+		if ( file_exists($this->configPath) ) {
+			unlink($this->configPath);
+		}
+
 		new ConfigEditor($this->configPath);
 		$this->assertFileExists($this->configPath, 'config with defaults is automatically created');
 	}
