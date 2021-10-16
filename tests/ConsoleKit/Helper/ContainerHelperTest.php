@@ -32,10 +32,12 @@ class ContainerHelperTest extends TestCase
 	 */
 	protected $container;
 
-	protected function setUp()
+	/**
+	 * @before
+	 * @return void
+	 */
+	protected function setupTest()
 	{
-		parent::setUp();
-
 		$this->container = $this->prophesize('ConsoleHelpers\\ConsoleKit\\Container')->reveal();
 		$this->containerHelper = new ContainerHelper($this->container);
 	}

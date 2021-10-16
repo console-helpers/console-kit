@@ -12,17 +12,21 @@ namespace Tests\ConsoleHelpers\ConsoleKit;
 
 
 use ConsoleHelpers\ConsoleKit\WorkingDirectory;
+use Yoast\PHPUnitPolyfills\Polyfills\ExpectException;
 
 class WorkingDirectoryTest extends WorkingDirectoryAwareTestCase
 {
 
+	use ExpectException;
+
 	/**
-	 * @expectedException \ConsoleHelpers\ConsoleKit\Exception\ApplicationException
-	 * @expectedExceptionMessage The $sub_folder is a path or empty.
 	 * @dataProvider incorrectSubFolderDataProvider
 	 */
 	public function testCreationWithIncorrectSubFolder($sub_folder)
 	{
+		$this->expectException('\ConsoleHelpers\ConsoleKit\Exception\ApplicationException');
+		$this->expectExceptionMessage('The $sub_folder is a path or empty.');
+
 		new WorkingDirectory($sub_folder);
 	}
 
@@ -46,23 +50,23 @@ class WorkingDirectoryTest extends WorkingDirectoryAwareTestCase
 		$this->getWorkingDirectory();
 	}
 
-	/**
-	 * @expectedException \ConsoleHelpers\ConsoleKit\Exception\ApplicationException
-	 * @expectedExceptionMessage The HOME environment variable must be set to run correctly
-	 */
 	public function testBrokenLinuxEnvironment()
 	{
+		$this->expectException('\ConsoleHelpers\ConsoleKit\Exception\ApplicationException');
+		$this->expectExceptionMessage('The HOME environment variable must be set to run correctly');
+
 		putenv('HOME=');
 		$this->getWorkingDirectory();
 	}
 
 	/**
 	 * @runInSeparateProcess
-	 * @expectedException \ConsoleHelpers\ConsoleKit\Exception\ApplicationException
-	 * @expectedExceptionMessage The APPDATA environment variable must be set to run correctly
 	 */
 	public function testBrokenWindowsEnvironment()
 	{
+		$this->expectException('\ConsoleHelpers\ConsoleKit\Exception\ApplicationException');
+		$this->expectExceptionMessage('The APPDATA environment variable must be set to run correctly');
+
 		putenv('HOME=');
 		define('PHP_WINDOWS_VERSION_MAJOR', 5);
 
