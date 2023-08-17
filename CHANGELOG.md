@@ -12,6 +12,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 ...
 
+## [0.2.0] - 2023-08-17
+### Changed
+- Dropped support for PHP 5.4 and PHP 5.5 versions.
+
 ## [0.1.2] - 2020-12-20
 ### Fixed
 - Updated dependencies.
