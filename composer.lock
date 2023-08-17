@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0956bcdfe573f2856d895d48bc1b1941",
+    "content-hash": "c55443d1d13105fa341ed4079a0c7b02",
     "packages": [
         {
             "name": "pimple/pimple",
