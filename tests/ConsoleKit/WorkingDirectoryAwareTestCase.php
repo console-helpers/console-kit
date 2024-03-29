@@ -96,8 +96,9 @@ abstract class WorkingDirectoryAwareTestCase extends AbstractTestCase
 
 		if ( $current_home_directory && $current_home_directory != $original_home_directory ) {
 			shell_exec('rm -Rf ' . escapeshellarg($current_home_directory));
-			putenv('HOME=' . $original_home_directory);
 		}
+
+		putenv('HOME=' . $original_home_directory);
 	}
 
 }
