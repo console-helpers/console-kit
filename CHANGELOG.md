@@ -12,6 +12,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 ...
 
+## [0.3.0] - 2024-03-29
+### Added
+- Added support for Symfony Console up to 7.x versions.
+- Test suite updated to work on PHPUnit 10.
+
 ## [0.2.0] - 2023-08-17
 ### Changed
 - Dropped support for PHP 5.4 and PHP 5.5 versions.
