@@ -12,12 +12,9 @@ namespace Tests\ConsoleHelpers\ConsoleKit;
 
 
 use ConsoleHelpers\ConsoleKit\WorkingDirectory;
-use Yoast\PHPUnitPolyfills\Polyfills\ExpectException;
 
 class WorkingDirectoryTest extends WorkingDirectoryAwareTestCase
 {
-
-	use ExpectException;
 
 	/**
 	 * @dataProvider incorrectSubFolderDataProvider

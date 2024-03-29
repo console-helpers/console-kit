@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit bootstrap="vendor/autoload.php"
 	colors="true"
-	strict="true"
-	verbose="true"
-	displayDetailsOnTestsThatTriggerDeprecations="true">
+	beStrictAboutTestsThatDoNotTestAnything="true"
+	beStrictAboutOutputDuringTests="true"
+	beStrictAboutChangesToGlobalState="true"
+	verbose="true">
 
 	<testsuites>
 		<testsuite name="default">
