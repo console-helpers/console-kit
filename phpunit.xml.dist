@@ -2,7 +2,8 @@
 <phpunit bootstrap="vendor/autoload.php"
 	colors="true"
 	strict="true"
-	verbose="true">
+	verbose="true"
+	displayDetailsOnTestsThatTriggerDeprecations="true">
 
 	<testsuites>
 		<testsuite name="default">
