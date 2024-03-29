@@ -13,9 +13,9 @@ namespace Tests\ConsoleHelpers\ConsoleKit\Helper;
 
 use ConsoleHelpers\ConsoleKit\Helper\ContainerHelper;
 use ConsoleHelpers\ConsoleKit\Container;
-use PHPUnit\Framework\TestCase;
+use Tests\ConsoleHelpers\ConsoleKit\AbstractTestCase;
 
-class ContainerHelperTest extends TestCase
+class ContainerHelperTest extends AbstractTestCase
 {
 
 	/**
