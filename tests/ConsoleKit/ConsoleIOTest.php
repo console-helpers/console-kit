@@ -12,14 +12,13 @@ namespace Tests\ConsoleHelpers\ConsoleKit;
 
 
 use ConsoleHelpers\ConsoleKit\ConsoleIO;
-use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 use Prophecy\Prophecy\ObjectProphecy;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\ChoiceQuestion;
 use Symfony\Component\Console\Question\ConfirmationQuestion;
 
-class ConsoleIOTest extends TestCase
+class ConsoleIOTest extends AbstractTestCase
 {
 
 	/**
