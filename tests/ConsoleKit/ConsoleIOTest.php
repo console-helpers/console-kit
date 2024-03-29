@@ -138,7 +138,7 @@ class ConsoleIOTest extends AbstractTestCase
 		}
 	}
 
-	public function outputVerbosityDataProvider()
+	public static function outputVerbosityDataProvider()
 	{
 		return array(
 			'quiet' => array(OutputInterface::VERBOSITY_QUIET),
@@ -188,7 +188,7 @@ class ConsoleIOTest extends AbstractTestCase
 		$this->io->askConfirmation('text', $answer);
 	}
 
-	public function askConfirmationDataProvider()
+	public static function askConfirmationDataProvider()
 	{
 		return array(
 			array(true),

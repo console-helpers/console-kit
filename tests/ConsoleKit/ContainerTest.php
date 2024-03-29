@@ -31,7 +31,7 @@ class ContainerTest extends AbstractTestCase
 		}
 	}
 
-	public function instanceDataProvider()
+	public static function instanceDataProvider()
 	{
 		return array(
 			'app_name' => array('UNKNOWN', 'app_name'),

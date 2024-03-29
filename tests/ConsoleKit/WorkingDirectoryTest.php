@@ -30,7 +30,7 @@ class WorkingDirectoryTest extends WorkingDirectoryAwareTestCase
 		new WorkingDirectory($sub_folder);
 	}
 
-	public function incorrectSubFolderDataProvider()
+	public static function incorrectSubFolderDataProvider()
 	{
 		return array(
 			'empty sub-folder' => array(''),
