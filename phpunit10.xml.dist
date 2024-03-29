@@ -4,8 +4,7 @@
 	colors="true"
 	beStrictAboutTestsThatDoNotTestAnything="true"
 	beStrictAboutOutputDuringTests="true"
-	beStrictAboutChangesToGlobalState="true"
-	cacheDirectory=".phpunit.cache">
+	beStrictAboutChangesToGlobalState="true">
 
 	<testsuites>
 		<testsuite name="default">
