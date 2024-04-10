@@ -212,6 +212,16 @@ class ConsoleIO
 	}
 
 	/**
+	 * Send a notification to the Terminal (via the BEL symbol).
+	 *
+	 * @return void
+	 */
+	public function notify()
+	{
+		$this->_output->write("\x07");
+	}
+
+	/**
 	 * Returns output.
 	 *
 	 * @return OutputInterface

@@ -12,6 +12,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 ...
 
+## [0.3.1] - 2024-04-10
+### Added
+- Added `ConsoleIO::notify` method for sending BEL symbol to the Terminal.
+
 ## [0.3.0] - 2024-03-29
 ### Added
 - Added support for Symfony Console up to 7.x versions.

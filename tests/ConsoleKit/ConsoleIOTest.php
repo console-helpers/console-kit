@@ -226,6 +226,13 @@ class ConsoleIOTest extends AbstractTestCase
 		$this->assertEquals(10, $progress_bar->getMaxSteps());
 	}
 
+	public function testNotify()
+	{
+		$this->output->write("\x07")->shouldBeCalled();
+
+		$this->io->notify();
+	}
+
 	public function testGetOutput()
 	{
 		$this->assertSame($this->output->reveal(), $this->io->getOutput());
