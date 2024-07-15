@@ -46,7 +46,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 2
 
@@ -58,7 +58,7 @@ jobs:
           tools: composer
 
       - name: Install dependencies
-        uses: "ramsey/composer-install@v1"
+        uses: "ramsey/composer-install@v3"
         with:
           dependency-versions: "highest"
 
@@ -67,7 +67,7 @@ jobs:
           vendor/bin/phpunit --configuration ${{ matrix.phpunit_config }} --coverage-clover=coverage.clover
 
       - name: Upload Coverage to CodeCov
-        uses: codecov/codecov-action@v2
+        uses: codecov/codecov-action@v3
 
       - name: Upload Coverage to Scrutinizer CI (PHP < 8.0)
         if: "${{ matrix.php < '8.0' }}"
