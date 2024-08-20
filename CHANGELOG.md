@@ -12,7 +12,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 ...
 
-## [0.4.0]
+## [0.4.0] - 2024-06-20
 ### Added
 - Added `Application::isTopmostCommand` method.
 
