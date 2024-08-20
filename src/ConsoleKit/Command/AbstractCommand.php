@@ -11,6 +11,7 @@
 namespace ConsoleHelpers\ConsoleKit\Command;
 
 
+use ConsoleHelpers\ConsoleKit\Application;
 use ConsoleHelpers\ConsoleKit\ConsoleIO;
 use ConsoleHelpers\ConsoleKit\Helper\ContainerHelper;
 use ConsoleHelpers\ConsoleKit\Container;
@@ -122,6 +123,16 @@ abstract class AbstractCommand extends Command implements CompletionAwareInterfa
 		}
 
 		return $container;
+	}
+
+	/**
+	 * Gets the application instance for this command.
+	 *
+	 * @return Application
+	 */
+	public function getApplication()
+	{
+		return parent::getApplication();
 	}
 
 }
