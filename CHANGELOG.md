@@ -4,13 +4,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Added
+...
+
+### Changed
+...
+
+### Fixed
+...
+
+## [0.4.0]
+### Added
 - Added `Application::isTopmostCommand` method.
 
 ### Changed
 - Use stable version of the `console-helpers/prophecy-phpunit` dependency.
-
-### Fixed
-...
 
 ## [0.3.1] - 2024-04-10
 ### Added
