@@ -13,11 +13,19 @@ namespace ConsoleHelpers\ConsoleKit;
 
 use Stecman\Component\Symfony\Console\BashCompletion\CompletionCommand;
 use Symfony\Component\Console\Application as BaseApplication;
+use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 class Application extends BaseApplication
 {
+
+	/**
+	 * Running command.
+	 *
+	 * @var Command
+	 */
+	private $_runningCommand;
 
 	/**
 	 * Dependency injection container.
@@ -55,6 +63,33 @@ class Application extends BaseApplication
 		$default_commands[] = new CompletionCommand();
 
 		return $default_commands;
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	protected function doRunCommand(Command $command, InputInterface $input, OutputInterface $output)
+	{
+		try {
+			$this->_runningCommand = $command;
+
+			return parent::doRunCommand($command, $input, $output);
+		}
+		finally {
+			$this->_runningCommand = null;
+		}
+	}
+
+	/**
+	 * Determines if this is topmost command.
+	 *
+	 * @param Command $command Command.
+	 *
+	 * @return boolean
+	 */
+	public function isTopmostCommand(Command $command)
+	{
+		return is_object($this->_runningCommand) && $command->getName() === $this->_runningCommand->getName();
 	}
 
 	/**
